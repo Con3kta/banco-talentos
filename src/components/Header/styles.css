@@ -1,0 +1,16 @@
+.home-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 8%;
+}
+
+.home-header-container img {
+    height: 120px;
+    opacity: 0.3;
+}
+
+.home-header-container h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}

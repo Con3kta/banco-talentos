@@ -1,0 +1,21 @@
+.home-container {
+    padding: 0rem 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.register-content,
+.search-content,
+.programadores-content {
+    color: #111;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.search-content div {
+    text-align: right;
+}
