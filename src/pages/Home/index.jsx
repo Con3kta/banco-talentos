@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import CustomButton from '../../components/CustomButton';
 import { useNavigate } from 'react-router-dom';
+import CustomCarousel from '../../components/CustomCarousel';
 
 export default function Home() {
     const navigate = useNavigate();
@@ -9,6 +10,7 @@ export default function Home() {
     return (
         <>
             <main className='home-container'>
+                <CustomCarousel />
                 <div className='register-content'>
                     <p>Você fez parte do Programadores Cariocas e quer deixar seu currículo no banco de talentos?</p>
                     <CustomButton text='Cadastrar currículo' onPress={() => navigate('/cadastro')} />
@@ -16,7 +18,7 @@ export default function Home() {
                 <div className='search-content'>
                     <div>
                         <p>Você faz parte de uma empresa ou iniciativa e quer contratar Programadores Cariocas?</p>
-                        <CustomButton text='Pesquisar Programadores' variant="dark" onPress={() => navigate('/cadastro')} />
+                        <CustomButton text='Pesquisar Programadores' variant="dark" onPress={() => navigate('/buscar')} />
                     </div>
                 </div>
                 <div className='programadores-content'>

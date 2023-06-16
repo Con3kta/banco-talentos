@@ -1,5 +1,5 @@
 import React from 'react';
-import prog_logo from '../../assets/react.svg';
+import prog_logo from '../../assets/logo/LOGO-PROGRAMADORES_Prancheta 1-03.png';
 import './navigation.css'
 import { useNavigate } from 'react-router-dom';
 import CustomButton from '../CustomButton';
@@ -9,9 +9,8 @@ export default function Navigation() {
 
     return (
         <nav className='navigation-container'>
-            <div>
-                {/* <img src={prog_logo} alt="programadores logo" onClick={() => navigate('/')} /> */}
-                <span onClick={() => navigate('/')}>Programadores Cariocas</span>
+            <div onClick={() => navigate('/')}>
+                <img src={prog_logo} alt="programadores logo" style={{height: 50}}/>
                 <span>/BANCO DE TALENTOS</span>
             </div>
             <CustomButton onClick={() => navigate('/cadastro')} text="Entrar" />

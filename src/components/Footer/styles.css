@@ -1,0 +1,15 @@
+.footer-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #014a7f;
+}
+
+.secretaria-logo {
+    height: 55px;
+}
+
+.footer-text p {
+    color: var(--primary-color);
+    opacity: 0.5;
+}

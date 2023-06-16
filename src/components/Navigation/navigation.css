@@ -12,16 +12,12 @@
     display: flex;
     align-items: center;
     gap: .1rem;
+    cursor: pointer;
 }
 
 .navigation-container span {
-    color: var(--text-color-alt);
+    color: #11bbef;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-}
-
-.navigation-container span:nth-of-type(1) {
-    color: #11bbef;
-    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './styles.css'
 import FormRegister from './FormRegister';
+import { motion } from "framer-motion"
 
 export default function Register() {
 
@@ -10,8 +11,11 @@ export default function Register() {
   };
 
   return (
-    <main className='register-container'>
-      <FormRegister onSubmit={() => handleSubmit()}/>
-    </main>
+    <motion.main className='register-container'
+      animate={{ opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+    >
+      <FormRegister onSubmit={() => handleSubmit()} />
+    </motion.main>
   )
 }
