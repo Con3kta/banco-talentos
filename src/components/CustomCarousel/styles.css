@@ -1,0 +1,9 @@
+.slider-container {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+  color: red;
+}
