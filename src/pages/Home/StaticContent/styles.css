@@ -34,6 +34,10 @@
         padding: 0;
         margin-bottom: 4rem;
     }
+    
+    .static-item {
+        width: 100vw;
+    }
 
     .static-item .register-content img,
     .static-item .search-content img,
