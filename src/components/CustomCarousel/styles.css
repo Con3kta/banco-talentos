@@ -1,9 +1,15 @@
 .slider-container {
-    width: 94%;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.slick-prev,
-.slick-next {
-  color: red;
+@media screen and (min-width: 1200px) {
+  .slider-container {
+    width: 95vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .slider-container {
+    width: 1250px;
+  }
 }
