@@ -10,7 +10,7 @@ export default function Navigation() {
     return (
         <nav className='navigation-container'>
             <div onClick={() => navigate('/')}>
-                <img src={prog_logo} alt="programadores logo" style={{height: 50}}/>
+                <img src={prog_logo} alt="programadores logo" />
                 <span>/BANCO DE TALENTOS</span>
             </div>
             <CustomButton onClick={() => navigate('/cadastro')} text="Entrar" />

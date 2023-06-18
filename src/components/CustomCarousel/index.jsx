@@ -1,14 +1,14 @@
 import React from 'react'
-import './styles.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './styles.css'
 
 export default function CustomCarousel({ slide1, slide2, slide3 }) {
     const settings = {
         dots: true,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         arrows: true,
         speed: 500,

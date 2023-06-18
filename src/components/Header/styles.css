@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 3rem 8%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0%;
 }
 
 .home-header-container img {
@@ -13,4 +15,40 @@
 .home-header-container h1 {
     font-size: 2.5rem;
     font-weight: 300;
+}
+
+@media screen and (max-width: 580px) {
+    .home-header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0%;
+        width: 100%;
+    }
+
+    .home-header-container img {
+        height: 70px;
+        position: absolute;
+    }
+
+    .home-header-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 580px ) and (max-width: 1200px) {
+    .home-header-container {
+        align-items: center;
+        padding: 1rem 0%;
+        width: 90%;
+    }
+
+    .home-header-container img {
+        height: 70px;
+        position: static;
+    }
+
+    .home-header-container h1 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
 }

@@ -21,3 +21,28 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+.navigation-container div img {
+    height: 50px;        
+}
+
+@media screen and (max-width: 580px) {
+    .navigation-container {
+        padding-inline: 5%;
+    }
+
+    .navigation-container span {
+        font-size: .7rem;
+    }
+
+    .navigation-container div img {
+        height: 40px;        
+    }
+}
+
+@media screen and (max-width: 960px) {
+   .navigation-container button {
+    display: none;
+   }
+
+}
