@@ -1,0 +1,16 @@
+.off-canvas-overlay {
+    min-width: 50vw;
+    min-height: 100vh;
+    padding: 2rem;
+    background: #222222ff;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 900;
+}
+
+.off-canvas-header {
+    display: flex;
+    justify-content: space-between;
+}

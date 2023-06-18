@@ -6,12 +6,17 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Filter from './pages/Filter'
 import './App.css'
+import CustomOffCanvas from './components/CustomOffCanvas'
+import { useContext, useState } from 'react'
+import { LoginContext } from './contexts/LoginContext'
 
 function App() {
-
+  const { showOffCanvas } = useContext(LoginContext);
+  
   return (
     <div className='App'>
       <HashRouter>
+        {showOffCanvas && <CustomOffCanvas />}
         <Navigation />
         <Header />
         <Routes>
