@@ -9,9 +9,10 @@
 }
 
 .static-item {
+    width: 100vw;
     display: flex;
 }
-
+ 
 .static-item .register-content,
 .static-item .search-content,
 .static-item .course-content {
@@ -33,10 +34,6 @@
         min-height: 265vh;
         padding: 0;
         margin-bottom: 4rem;
-    }
-    
-    .static-item {
-        width: 100vw;
     }
 
     .static-item .register-content img,
