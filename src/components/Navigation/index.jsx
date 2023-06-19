@@ -13,8 +13,8 @@ export default function Navigation() {
     return (
         <nav className='navigation-container'>
             <div onClick={() => navigate('/')}>
-                <img src={prog_logo} alt="programadores logo" />
-                <span>CON3KTA</span>
+                <span>{'</> CON3KTA'}</span>
+                {/* <img src={prog_logo} alt="programadores logo" /> */}
             </div>
             <CustomButton onPress={() => setShowOffCanvas(true)} text="Entrar" />
             <FiMenu className='menu-mobile-icon' />
