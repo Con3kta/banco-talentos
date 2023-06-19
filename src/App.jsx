@@ -1,22 +1,32 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import Register from './pages/Register'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Filter from './pages/Filter'
-import './App.css'
 import CustomOffCanvas from './components/CustomOffCanvas'
-import { useContext, useState } from 'react'
-import { LoginContext } from './contexts/LoginContext'
+import { useEffect } from 'react'
 import Login from './pages/Login'
+import './App.css'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
-  
+
   return (
     <div className='App'>
       <HashRouter>
-        <CustomOffCanvas children={<Login />}/>
+        <ScrollToTop />
+        <CustomOffCanvas children={<Login />} />
         <Navigation />
         <Header />
         <Routes>
