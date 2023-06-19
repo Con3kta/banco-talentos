@@ -9,14 +9,14 @@ import './App.css'
 import CustomOffCanvas from './components/CustomOffCanvas'
 import { useContext, useState } from 'react'
 import { LoginContext } from './contexts/LoginContext'
+import Login from './pages/Login'
 
 function App() {
-  const { showOffCanvas } = useContext(LoginContext);
   
   return (
     <div className='App'>
       <HashRouter>
-        {showOffCanvas && <CustomOffCanvas />}
+        <CustomOffCanvas children={<Login />}/>
         <Navigation />
         <Header />
         <Routes>

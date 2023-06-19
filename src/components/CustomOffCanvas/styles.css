@@ -1,8 +1,8 @@
 .off-canvas-overlay {
-    min-width: 50vw;
+    min-width: 100vw;
     min-height: 100vh;
     padding: 2rem;
-    background: #222222ff;
+    background: #222222cc;
     color: #fff;
     position: absolute;
     top: 0;
@@ -10,7 +10,25 @@
     z-index: 900;
 }
 
+.off-canvas-content {
+    width: 500px;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+}
+
 .off-canvas-header {
     display: flex;
     justify-content: space-between;
+}
+
+.off-canvas-close-icon {
+    font-size: 1.8rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: var(--primary-bgcolor);
 }

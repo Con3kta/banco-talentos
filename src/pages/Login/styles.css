@@ -1,0 +1,40 @@
+.login-container {
+    height: 100vh;
+    color: #333;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+.sing-in-container,
+.sing-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sing-up-header {
+    text-align: left;
+}
+
+.sing-up-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sing-up-input-container label {
+    font-size: .8rem;
+    color: #333333cc;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.footer-text span {
+    color: var(--primary-bgcolor);
+    font-weight: 600;
+    cursor: pointer;
+}
