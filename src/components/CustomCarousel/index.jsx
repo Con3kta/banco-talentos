@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './styles.css'
 
-export default function CustomCarousel({ slide1, slide2, slide3 }) {
+export default function CustomCarousel({ children, slide0, slide1, slide2, slide3 }) {
     const settings = {
         dots: true,
         infinite: true,
@@ -16,8 +16,13 @@ export default function CustomCarousel({ slide1, slide2, slide3 }) {
         slidesToScroll: 1
     };
     return (
-        <Slider {...settings} className='slider-container'>
-            {slide1}{slide2}{slide3}
-        </Slider>
+        children ?
+            <Slider {...settings} className='slider-container'>
+                { children }
+            </Slider>
+            :
+            <Slider {...settings} className='slider-container'>
+                {slide0}{slide1}{slide2}{slide3}
+            </Slider>
     );
 }

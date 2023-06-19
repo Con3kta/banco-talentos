@@ -21,6 +21,9 @@ export default function Home() {
         <main className='Home-container'>
             <div className='home-slider-container'>
                 <CustomCarousel
+                    slide0={
+                        <h1>Programadores Cariocas</h1>
+                    }
                     slide1={
                         <div className='carousel-item'>
                             <article className='register-content'>
