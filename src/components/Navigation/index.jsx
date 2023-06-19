@@ -9,12 +9,12 @@ import { FiMenu } from "react-icons/fi";
 export default function Navigation() {
     const { setShowOffCanvas } = useContext(LoginContext);
     const navigate = useNavigate();
-
+    
     return (
         <nav className='navigation-container'>
             <div onClick={() => navigate('/')}>
                 <img src={prog_logo} alt="programadores logo" />
-                <span>/BANCO DE TALENTOS</span>
+                <span>CON3KTA</span>
             </div>
             <CustomButton onPress={() => setShowOffCanvas(true)} text="Entrar" />
             <FiMenu className='menu-mobile-icon' />

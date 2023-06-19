@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './styles.css'
 import CustomFormInput from '../../components/CustomFormInput'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // to enter in the account
-const SingIn = ({ onSubmit }) => {
+const SingIn = ({ onSubmit, setController }) => {
     const [status, setStatus] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
@@ -14,7 +15,13 @@ const SingIn = ({ onSubmit }) => {
     }, [])
 
     return (
-        <form onSubmit={onSubmit} className='sing-in-container'>
+        <motion.form
+            onSubmit={onSubmit}
+            initial={{ translateX: 1300, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className='sing-in-container'
+        >
             <div className="sing-up-header">
                 <h2>Entrar na plataforma.</h2>
             </div>
@@ -32,12 +39,15 @@ const SingIn = ({ onSubmit }) => {
             </div>
             {status && <span>{status}</span>}
             <button type="submit">Entrar</button>
-        </form>
+            <p
+                className='footer-text'
+                onClick={setController}>Não tem cadastro? <span>Cadastrar-se</span></p>
+        </motion.form>
     )
 }
 
 // to create a new account
-const SingUp = ({ onSubmit }) => {
+const SingUp = ({ onSubmit, setController }) => {
     const [status, setStatus] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
@@ -47,7 +57,13 @@ const SingUp = ({ onSubmit }) => {
     }, [])
 
     return (
-        <form onSubmit={onSubmit} className='sing-up-container'>
+        <motion.form
+            onSubmit={onSubmit}
+            initial={{ translateX: 1300, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className='sing-up-container'
+        >
             <div className="sing-up-header">
                 <h2>Faça parte!</h2>
                 <h3>Crie sua conta agora.</h3>
@@ -68,7 +84,10 @@ const SingUp = ({ onSubmit }) => {
                 <span>{status}</span>
             </div>
             <button type="submit">Cadastrar</button>
-        </form>
+            <p
+                className='footer-text'
+                onClick={setController}>Você já possui cadastro? <span>Entrar</span></p>
+        </motion.form>
     )
 }
 
@@ -77,20 +96,13 @@ export default function Login() {
 
     return (
         <div className='login-container'>
-            {isSingIn ?
-                <>
-                    <SingIn onSubmit={() => { }} />
-                    <p
-                        className='footer-text'
-                        onClick={() => setIsSingIn(false)}>Não tem cadastro? <span>Cadastrar-se</span></p>
-                </> :
-                <>
-                    <SingUp onSubmit={() => { }} />
-                    <p
-                        className='footer-text'
-                        onClick={() => setIsSingIn(true)}>Você já possui cadastro? <span>Entrar</span></p>
-                </>
-            }
+            <AnimatePresence>
+                {isSingIn ?
+                    <SingIn onSubmit={() => { }} setController={() => setIsSingIn(false)} />
+                    :
+                    <SingUp onSubmit={() => { }} setController={() => setIsSingIn(true)} />
+                }
+            </AnimatePresence>
         </div>
     )
 }
