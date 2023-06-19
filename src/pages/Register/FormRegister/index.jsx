@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import CustomButton from '../../../components/CustomButton';
 import CustomFormInput from '../../../components/CustomFormInput';
-import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import './styles.css'
 import FormProfessional from '../FormProfessional';
 
 export default function FormRegister({ onSubmit }) {
-  const [showPassword, setShowPassword] = useState(false);
   const inputCpf = useRef(null);
 
   const handleCheck = () => {
@@ -51,22 +49,6 @@ export default function FormRegister({ onSubmit }) {
       <div className='form-container register-account' >
         <CustomFormInput inputType={"email"} labelValue={"Insira seu Email"} placeHolder={"Digite seu email..."} inputWarning="Insira seu email: email@email.com" />
         <CustomFormInput inputType={"email"} labelValue={"Confirme seu Email"} placeHolder={"Digite novamente seu email..."} inputWarning="Insira seu email: email@email.com" />
-      </div>
-      <div className='form-container register-account' >
-        <CustomFormInput
-          inputType={showPassword ? "text" : "password"}
-          labelValue={"Insira uma senha"}
-          placeHolder={"Digite sua senha..."}
-          inputWarning="Mínimo 8 caractéres"
-          inputMinLength={8} icon={showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
-          onIconPress={() => setShowPassword(!showPassword)} />
-        <CustomFormInput
-          inputType={showPassword ? "text" : "password"}
-          labelValue={"Confirme sua senha"}
-          placeHolder={"Digite novamente sua senha..."}
-          inputWarning="Mínimo 8 caractéres"
-          inputMinLength={8} icon={showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
-          onIconPress={() => setShowPassword(!showPassword)} />
       </div>
       <h2>Sua Experiência</h2>
       <div className='form-container professional-content' >

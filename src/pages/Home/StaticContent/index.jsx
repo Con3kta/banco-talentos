@@ -13,9 +13,9 @@ export default function StaticContent() {
         <div className="home-container">
             <div className='static-item'>
                 <article className='register-content'>
+                    <h2>Você fez parte do Programadores Cariocas?</h2>
                     <img src="https://prefeitura.rio/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-20-at-10.39.45.jpeg" alt="" />
                     <aside>
-                        <h2>Você fez parte do Programadores Cariocas?</h2>
                         <h2>cadastre seu currículo no banco de talentos!</h2>
                         <CustomButton text='Cadastrar currículo' onPress={() => navigate('/cadastro')} />
                         <p>O Programadores Cariocas tem o objetivo de oferecer oportunidade de entrada no mercado de trabalho para os jovens mais vulneráveis. Além disso, também vai contribuir para reduzir o déficit de profissionais qualificados na área de linguagens de programação e minimizar desigualdades sociais.</p>

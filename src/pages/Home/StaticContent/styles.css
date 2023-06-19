@@ -9,15 +9,15 @@
 }
 
 .static-item {
+    width: 100vw;
     display: flex;
 }
-
+ 
 .static-item .register-content,
 .static-item .search-content,
 .static-item .course-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 }
 
@@ -26,18 +26,20 @@
 .static-item .course-content h2 {
     font-size: 14px;
     width: 300px;
+    text-align: center;
 }
 
 @media screen and (min-width: 320px) {
     .home-container {
-        min-height: 250vh;
+        min-height: 265vh;
         padding: 0;
+        margin-bottom: 4rem;
     }
 
     .static-item .register-content img,
     .static-item .search-content img,
     .static-item .course-content img {
-        width: 300px;
+        width: 100vw;
         height: 300px;
         object-fit: cover;
     }
@@ -45,8 +47,8 @@
     .static-item .register-content p,
     .static-item .search-content p,
     .static-item .course-content p {
-        font-size: 10px;
-        width: 300px;
+        font-size: 12px;
+        width: 90vw;
     }
 
     .search-content aside .language-icon-container {
@@ -59,31 +61,33 @@
 @media screen and (min-width: 580px) {
     .home-container {
         justify-content: flex-start;
-        min-height: 290vh;
+        min-height: 240vh;
         padding: 0;
+        margin-bottom: 1rem;
     }
     
     .static-item .course-content {
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 
     .static-item .register-content img,
     .static-item .search-content img,
     .static-item .course-content img {
-        width: calc(400px * 5%);
+        width: 90vw;
     }
 
     .static-item .register-content h2,
     .static-item .search-content h2,
     .static-item .course-content h2 {
         font-size: 16px;
-        width: 80%;
+        width: 90vw;
     }
 
     .static-item .register-content p,
     .static-item .search-content p,
     .static-item .course-content p {
         font-size: 14px;
+        width: 80vw;
     }
 
     .search-content aside .language-icon-container {
@@ -93,18 +97,66 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 720px) {
+    .home-container {
+        min-height: 270vh;
+    }
+    
+    .static-item .course-content {
+        margin-top: 2rem;
+    }
 
     .static-item .register-content img,
     .static-item .search-content img,
     .static-item .course-content img {
-        width: calc(100% - 150px);
-        height: 200px;
-        object-fit: cover;
+        width: 80vw;
     }
 
+    .static-item .register-content h2,
+    .static-item .search-content h2,
+    .static-item .course-content h2 {
+        font-size: 18px;
+    }
+
+    .static-item .register-content p,
+    .static-item .search-content p,
+    .static-item .course-content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .home-container {
+        margin-bottom: 8rem;
+    }
+
+    .static-item .course-content {
+        margin-top: 8rem;
+    }
+
+    .static-item .register-content img,
+    .static-item .search-content img,
+    .static-item .course-content img {
+        width: 80vw;
+        height: 400px;
+    }
+
+    .static-item .register-content h2,
+    .static-item .search-content h2,
+    .static-item .course-content h2 {
+        font-size: 20px;
+    }
+
+    .static-item .register-content p,
+    .static-item .search-content p,
+    .static-item .course-content p {
+        font-size: 16px;
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .home-container {
         display: none;
     }
-
 }

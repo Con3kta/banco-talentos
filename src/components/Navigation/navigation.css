@@ -23,7 +23,13 @@
 }
 
 .navigation-container div img {
-    height: 50px;        
+    height: 50px;
+}
+
+.menu-mobile-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    display: none;
 }
 
 @media screen and (max-width: 580px) {
@@ -36,13 +42,18 @@
     }
 
     .navigation-container div img {
-        height: 40px;        
+        height: 40px;
     }
 }
 
 @media screen and (max-width: 960px) {
-   .navigation-container button {
-    display: none;
-   }
+    .navigation-container button {
+        display: none;
+    }
 
+    .menu-mobile-icon {
+        color: var(--primary-color);
+        font-size: 2rem;
+        display: block;
+    }
 }

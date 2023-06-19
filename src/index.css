@@ -6,6 +6,7 @@
   background-color: var(--bg-color);
 
   --bg-color: #e5e5e5;
+  --bg-color-dark: #11111f;
   --bg-color-alt: #363636;
   --text-color: #333;
   --text-color-alt: #fff;
